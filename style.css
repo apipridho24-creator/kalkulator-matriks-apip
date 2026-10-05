@@ -1,0 +1,1244 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background:
+    radial-gradient(circle at top, #463b16 0%, #171717 45%, #050505 100%);
+  color: white;
+}
+
+
+/* ================= UMUM ================= */
+
+.page {
+  min-height: 100vh;
+  width: 100%;
+}
+
+.hidden {
+  display: none !important;
+}
+
+
+/* ================= MENU AWAL ================= */
+
+.home-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 30px 20px;
+
+  background:
+    linear-gradient(
+      rgba(0,0,0,0.55),
+      rgba(0,0,0,0.8)
+    ),
+    radial-gradient(
+      circle at center,
+      #6e5419,
+      #151515 60%,
+      #000
+    );
+
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* Efek lingkaran */
+
+.home-page::before {
+  content: "";
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  border: 2px solid rgba(245,197,66,0.15);
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 0 30px rgba(245,197,66,0.03),
+    0 0 0 60px rgba(245,197,66,0.02);
+
+  z-index: 0;
+}
+
+
+/* Simbol bajak laut */
+
+.ship-wheel {
+  position: relative;
+  z-index: 1;
+
+  width: 85px;
+  height: 85px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 3px solid #f5c542;
+  border-radius: 50%;
+
+  font-size: 45px;
+
+  color: #f5c542;
+
+  margin-bottom: 20px;
+
+  box-shadow:
+    0 0 20px rgba(245,197,66,0.3);
+}
+
+
+.home-page h1 {
+  position: relative;
+  z-index: 1;
+
+  margin: 0;
+
+  font-size: clamp(40px, 10vw, 75px);
+
+  letter-spacing: 7px;
+
+  color: #f5c542;
+
+  text-shadow:
+    3px 3px 0 #8a6615,
+    0 0 25px rgba(245,197,66,0.35);
+}
+
+
+.home-page h2 {
+  position: relative;
+  z-index: 1;
+
+  margin: 5px 0 15px;
+
+  font-size: clamp(20px, 5vw, 35px);
+
+  letter-spacing: 5px;
+
+  color: white;
+}
+
+
+.divider {
+  position: relative;
+  z-index: 1;
+
+  width: 180px;
+  height: 3px;
+
+  margin: 10px auto 20px;
+
+  background: #f5c542;
+
+  box-shadow:
+    0 0 10px rgba(245,197,66,0.6);
+}
+
+
+.welcome {
+  position: relative;
+  z-index: 1;
+
+  font-size: 18px;
+
+  color: #ddd;
+
+  margin-bottom: 25px;
+}
+
+
+/* ================= DATA MAHASISWA ================= */
+
+.members {
+  position: relative;
+  z-index: 1;
+
+  width: min(500px, 95%);
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+
+  margin-bottom: 30px;
+}
+
+
+.member {
+  padding: 15px 20px;
+
+  background: rgba(255,255,255,0.08);
+
+  border: 1px solid rgba(245,197,66,0.5);
+
+  border-radius: 12px;
+
+  backdrop-filter: blur(5px);
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+
+.member strong {
+  font-size: 18px;
+
+  color: white;
+}
+
+
+.member span {
+  font-size: 15px;
+
+  color: #f5c542;
+}
+
+
+/* ================= BUTTON ================= */
+
+button {
+  border: none;
+
+  border-radius: 10px;
+
+  padding: 12px 20px;
+
+  background: #f5c542;
+
+  color: #111;
+
+  font-weight: bold;
+
+  font-size: 15px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s,
+    background 0.2s,
+    box-shadow 0.2s;
+}
+
+
+button:hover {
+  background: white;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 5px 15px rgba(255,255,255,0.2);
+}
+
+
+.start-button {
+  position: relative;
+  z-index: 1;
+
+  padding: 15px 30px;
+
+  font-size: 17px;
+
+  border-radius: 30px;
+
+  box-shadow:
+    0 0 20px rgba(245,197,66,0.3);
+}
+
+
+.footer {
+  position: relative;
+  z-index: 1;
+
+  margin-top: 35px;
+
+  color: #777;
+
+  font-size: 13px;
+}
+
+
+/* ================= KALKULATOR ================= */
+
+.calculator-page {
+  padding: 20px 15px 50px;
+
+  background:
+    radial-gradient(
+      circle at top,
+      #4a3a13,
+      #151515 50%,
+      #050505
+    );
+}
+
+
+.calculator {
+  width: min(700px, 100%);
+
+  margin: auto;
+
+  text-align: center;
+}
+
+
+.back-button {
+  display: block;
+
+  margin-bottom: 20px;
+
+  background: #333;
+
+  color: white;
+}
+
+
+.calculator h1 {
+  color: #f5c542;
+
+  margin-bottom: 5px;
+}
+
+
+.subtitle {
+  color: #aaa;
+
+  margin-top: 0;
+
+  margin-bottom: 25px;
+}
+
+
+/* ================= CARD ================= */
+
+.card {
+  padding: 20px;
+
+  background: rgba(255,255,255,0.07);
+
+  border: 1px solid rgba(245,197,66,0.4);
+
+  border-radius: 15px;
+
+  margin-bottom: 20px;
+}
+
+
+.card label {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #ddd;
+}
+
+
+select {
+  padding: 11px 15px;
+
+  margin-right: 5px;
+
+  border-radius: 8px;
+
+  border: 1px solid #f5c542;
+
+  background: #222;
+
+  color: white;
+
+  font-size: 16px;
+}
+
+
+/* ================= MATRIKS ================= */
+
+#inputMatriks {
+  margin-top: 20px;
+}
+
+
+.matrix-box {
+  display: inline-block;
+
+  padding: 20px;
+
+  margin-top: 10px;
+
+  border-left: 5px solid #f5c542;
+  border-right: 5px solid #f5c542;
+
+  border-radius: 10px;
+
+  background: rgba(0,0,0,0.35);
+}
+
+
+.matrix-row {
+  display: flex;
+
+  justify-content: center;
+}
+
+
+input.matrix-input {
+  width: 60px;
+  height: 48px;
+
+  margin: 5px;
+
+  border-radius: 8px;
+
+  border: 2px solid #555;
+
+  background: #111;
+
+  color: white;
+
+  text-align: center;
+
+  font-size: 18px;
+
+  outline: none;
+}
+
+
+input.matrix-input:focus {
+  border-color: #f5c542;
+
+  box-shadow:
+    0 0 8px rgba(245,197,66,0.3);
+}
+
+
+/* ================= MENU OPERASI ================= */
+
+.operation-menu {
+  margin-top: 25px;
+
+  padding: 20px;
+
+  border-radius: 15px;
+
+  background: rgba(255,255,255,0.06);
+
+  border: 1px solid rgba(245,197,66,0.3);
+}
+
+
+.operation-menu h3 {
+  color: #f5c542;
+
+  margin-top: 0;
+}
+
+
+.operation-menu button {
+  margin: 5px;
+}
+
+
+/* ================= HASIL ================= */
+
+#hasil {
+  margin-top: 25px;
+}
+
+
+.result-box {
+  padding: 20px;
+
+  background: rgba(255,255,255,0.08);
+
+  border: 1px solid #f5c542;
+
+  border-radius: 15px;
+}
+
+
+.result-box h3 {
+  color: #f5c542;
+}
+
+
+.result-matrix {
+  margin: 15px auto;
+
+  display: inline-block;
+
+  padding: 10px 20px;
+
+  border-left: 4px solid #f5c542;
+  border-right: 4px solid #f5c542;
+
+  border-radius: 7px;
+
+  font-size: 20px;
+
+  line-height: 1.8;
+}
+
+
+/* ================= HP ================= */
+
+@media (max-width: 500px) {
+
+  .home-page {
+    padding: 25px 15px;
+  }
+
+  .home-page h1 {
+    letter-spacing: 3px;
+  }
+
+  .home-page h2 {
+    letter-spacing: 2px;
+  }
+
+  input.matrix-input {
+    width: 52px;
+    height: 44px;
+  }
+
+  select {
+    width: 100%;
+
+    margin-bottom: 10px;
+  }
+
+  .card button {
+    width: 100%;
+  }
+
+}
+
+
+/* =========================================================
+   TATA LETAK HASIL BARU
+   GRAND LINE MATRIX CALCULATOR
+========================================================= */
+
+
+/* ================= HASIL UTAMA ================= */
+
+#hasil {
+    width: 100%;
+    margin: 35px auto 0;
+    padding-bottom: 50px;
+}
+
+
+/* ================= KARTU HASIL ================= */
+
+.new-result-card {
+    width: 100%;
+    max-width: 680px;
+
+    margin: 0 auto;
+
+    padding: 30px 25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,0.075),
+            rgba(0,0,0,0.28)
+        );
+
+    border: 2px solid #f5c542;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 12px 35px rgba(0,0,0,0.45),
+        0 0 25px rgba(245,197,66,0.08);
+
+    text-align: center;
+
+    overflow: hidden;
+}
+
+
+/* ================= JUDUL ================= */
+
+.result-main-title {
+    color: #f5c542;
+
+    font-size: 28px;
+
+    font-weight: 800;
+
+    margin-bottom: 12px;
+
+    line-height: 1.3;
+}
+
+
+.result-answer {
+    color: #ffffff;
+
+    font-size: 21px;
+
+    line-height: 1.6;
+
+    margin-bottom: 25px;
+}
+
+
+.result-answer strong {
+    color: #f5c542;
+}
+
+
+/* ================= SECTION LANGKAH ================= */
+
+.work-section {
+    width: 100%;
+
+    margin: 20px 0;
+
+    padding: 22px 18px;
+
+    background:
+        rgba(0,0,0,0.22);
+
+    border: 1px solid rgba(245,197,66,0.28);
+
+    border-radius: 16px;
+
+    box-sizing: border-box;
+}
+
+
+.work-section-title {
+    color: #f5c542;
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    margin-bottom: 18px;
+
+    line-height: 1.45;
+}
+
+
+.work-section-content {
+    color: #eeeeee;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    text-align: center;
+}
+
+
+/* ================= PENJELASAN ================= */
+
+.explanation {
+    max-width: 580px;
+
+    margin: 10px auto 20px;
+
+    color: #dddddd;
+
+    font-size: 17px;
+
+    line-height: 1.65;
+}
+
+
+/* ================= MATRIX CANTIK ================= */
+
+.beautiful-matrix {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin: 22px auto;
+
+    width: 100%;
+}
+
+
+.matrix-left-bracket {
+    position: relative;
+
+    display: inline-block;
+
+    padding: 10px 20px;
+
+    border-left: 5px solid #f5c542;
+
+    border-right: 5px solid #f5c542;
+
+    border-radius: 16px;
+
+    background:
+        rgba(0,0,0,0.25);
+
+    box-shadow:
+        0 0 18px rgba(245,197,66,0.08);
+}
+
+
+.matrix-left-bracket table {
+    border-collapse: separate;
+
+    border-spacing: 0;
+
+    margin: auto;
+}
+
+
+.matrix-left-bracket td {
+    min-width: 55px;
+
+    height: 48px;
+
+    padding: 3px 10px;
+
+    color: #ffffff;
+
+    font-size: 21px;
+
+    font-weight: 500;
+
+    text-align: center;
+
+    white-space: nowrap;
+}
+
+
+/* ================= AUGMENTED MATRIX ================= */
+
+.matrix-divider {
+    border-left: 2px solid #f5c542 !important;
+
+    padding-left: 18px !important;
+}
+
+
+/* ================= RUMUS ================= */
+
+.formula-box {
+    display: inline-block;
+
+    max-width: 100%;
+
+    padding: 15px 20px;
+
+    margin: 5px auto 10px;
+
+    background:
+        rgba(245,197,66,0.08);
+
+    border: 1px solid rgba(245,197,66,0.35);
+
+    border-radius: 12px;
+
+    color: #ffffff;
+
+    font-size: 20px;
+
+    font-weight: 600;
+
+    line-height: 1.6;
+
+    box-sizing: border-box;
+}
+
+
+/* ================= PERHITUNGAN ================= */
+
+.calculation-box {
+    width: 100%;
+
+    padding: 15px 10px;
+
+    color: #ffffff;
+
+    font-size: 19px;
+
+    line-height: 2;
+
+    box-sizing: border-box;
+
+    overflow-wrap: anywhere;
+}
+
+
+.calculation-box strong {
+    color: #f5c542;
+
+    font-size: 21px;
+}
+
+
+/* ================= MAPPING TRANSPOSE ================= */
+
+.mapping-box {
+    display: inline-block;
+
+    max-width: 100%;
+
+    padding: 12px 20px;
+
+    background:
+        rgba(0,0,0,0.2);
+
+    border-radius: 12px;
+
+    color: #ffffff;
+
+    font-size: 18px;
+
+    line-height: 2;
+}
+
+
+/* ================= JAWABAN AKHIR ================= */
+
+.final-answer-box {
+    margin-top: 30px;
+
+    padding: 25px 18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(245,197,66,0.12),
+            rgba(0,0,0,0.25)
+        );
+
+    border-top: 2px solid #f5c542;
+
+    border-bottom: 2px solid #f5c542;
+
+    border-radius: 16px;
+}
+
+
+.final-answer-title {
+    color: #f5c542;
+
+    font-size: 22px;
+
+    font-weight: 800;
+
+    margin-bottom: 15px;
+}
+
+
+.final-answer-value {
+    color: #ffffff;
+
+    font-size: 25px;
+
+    font-weight: 800;
+
+    margin: 15px 0;
+}
+
+
+.final-answer-box p {
+    color: #dddddd;
+
+    font-size: 16px;
+
+    line-height: 1.6;
+
+    margin: 15px auto 0;
+
+    max-width: 550px;
+}
+
+
+.final-answer-box p strong {
+    color: #f5c542;
+}
+
+
+/* ================= RANK ================= */
+
+.rank-result {
+    margin-top: 20px;
+
+    color: #ffffff;
+
+    font-size: 21px;
+}
+
+
+.rank-result strong {
+    color: #f5c542;
+}
+
+
+/* ================= ERROR ================= */
+
+.error-box {
+    margin: 20px 0;
+
+    padding: 22px;
+
+    border: 1px solid #d9534f;
+
+    border-radius: 14px;
+
+    background: rgba(217,83,79,0.12);
+
+    color: #ffffff;
+
+    font-size: 18px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   INPUT MATRIKS BARU
+========================================================= */
+
+.matrix-input-card {
+    width: 100%;
+
+    max-width: 680px;
+
+    margin: 20px auto;
+
+    padding: 25px 20px;
+
+    background:
+        rgba(255,255,255,0.06);
+
+    border: 1px solid rgba(245,197,66,0.35);
+
+    border-radius: 18px;
+
+    text-align: center;
+}
+
+
+.matrix-input-title {
+    color: #f5c542;
+
+    font-size: 21px;
+
+    font-weight: 700;
+
+    margin-bottom: 5px;
+}
+
+
+.matrix-input-subtitle {
+    color: #aaa;
+
+    font-size: 15px;
+
+    margin-bottom: 18px;
+}
+
+
+.matrix-input-wrapper {
+    display: flex;
+
+    justify-content: center;
+
+    margin: 10px auto 20px;
+}
+
+
+.matrix-bracket {
+    display: inline-block;
+
+    padding: 10px 15px;
+
+    border-left: 4px solid #f5c542;
+
+    border-right: 4px solid #f5c542;
+
+    border-radius: 12px;
+}
+
+
+.matrix-input-row {
+    display: flex;
+
+    justify-content: center;
+}
+
+
+.matrix-input-row .matrix-input {
+    width: 60px !important;
+
+    height: 48px !important;
+
+    margin: 5px !important;
+
+    box-sizing: border-box;
+
+    text-align: center;
+}
+
+
+.matrix-confirm-button {
+    margin-top: 5px;
+
+    background: #f5c542;
+
+    color: #111;
+}
+
+
+.ready-message {
+    margin: 20px auto;
+
+    max-width: 600px;
+
+    padding: 16px;
+
+    border-radius: 14px;
+
+    border: 1px solid rgba(245,197,66,0.35);
+
+    background: rgba(245,197,66,0.07);
+
+    color: #dddddd;
+
+    font-size: 16px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   MENU OPERASI
+========================================================= */
+
+.operation-menu {
+    max-width: 680px;
+
+    margin: 25px auto;
+
+    padding: 24px 18px;
+
+    border-radius: 18px;
+
+    background:
+        rgba(255,255,255,0.055);
+
+    border: 1px solid rgba(245,197,66,0.35);
+
+    text-align: center;
+}
+
+
+.operation-menu h3 {
+    margin-top: 0;
+
+    margin-bottom: 18px;
+
+    color: #f5c542;
+
+    font-size: 21px;
+}
+
+
+.operation-menu button {
+    margin: 5px;
+
+    min-width: 130px;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.operation-menu button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 5px 18px rgba(245,197,66,0.2);
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .new-result-card {
+        padding: 22px 12px;
+
+        border-radius: 18px;
+    }
+
+
+    .result-main-title {
+        font-size: 24px;
+    }
+
+
+    .result-answer {
+        font-size: 18px;
+    }
+
+
+    .work-section {
+        padding: 18px 10px;
+
+        margin: 16px 0;
+    }
+
+
+    .work-section-title {
+        font-size: 18px;
+    }
+
+
+    .work-section-content {
+        font-size: 16px;
+    }
+
+
+    .explanation {
+        font-size: 16px;
+
+        padding: 0 5px;
+    }
+
+
+    .matrix-left-bracket {
+        padding: 8px 10px;
+
+        border-left-width: 4px;
+
+        border-right-width: 4px;
+    }
+
+
+    .matrix-left-bracket td {
+        min-width: 42px;
+
+        height: 42px;
+
+        padding: 2px 5px;
+
+        font-size: 18px;
+    }
+
+
+    .formula-box {
+        width: 100%;
+
+        font-size: 17px;
+
+        padding: 13px 10px;
+    }
+
+
+    .calculation-box {
+        font-size: 17px;
+
+        line-height: 1.8;
+
+        padding-left: 3px;
+
+        padding-right: 3px;
+    }
+
+
+    .mapping-box {
+        width: 100%;
+
+        box-sizing: border-box;
+
+        padding: 10px 5px;
+
+        font-size: 16px;
+
+        overflow-x: auto;
+    }
+
+
+    .final-answer-title {
+        font-size: 20px;
+    }
+
+
+    .final-answer-value {
+        font-size: 22px;
+    }
+
+
+    .matrix-input-card {
+        padding: 20px 10px;
+    }
+
+
+    .matrix-input-row .matrix-input {
+        width: 50px !important;
+
+        height: 44px !important;
+
+        margin: 4px !important;
+    }
+
+
+    .operation-menu button {
+        width: 100%;
+
+        margin: 5px 0;
+    }
+}
+
+
+/* =========================================================
+   3 x 3 MATRIX KHUSUS HP KECIL
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .matrix-input-row .matrix-input {
+        width: 43px !important;
+
+        height: 42px !important;
+
+        margin: 3px !important;
+
+        font-size: 15px !important;
+    }
+
+
+    .matrix-left-bracket td {
+        min-width: 34px;
+
+        font-size: 16px;
+
+        padding: 2px 3px;
+    }
+}

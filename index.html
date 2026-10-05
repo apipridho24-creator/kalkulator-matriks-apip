@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Grand Line Matrix Calculator</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ================= MENU AWAL ================= -->
+  <section id="home" class="page home-page">
+
+    <div class="ship-wheel">☠</div>
+
+    <h1>GRAND LINE</h1>
+    <h2>MATRIX CALCULATOR</h2>
+
+    <div class="divider"></div>
+
+    <p class="welcome">
+      Selamat Datang di Kalkulator Matriks
+    </p>
+
+    <div class="members">
+
+      <div class="member">
+        <strong>Arafat Ridho Subekti</strong>
+        <span>(G1C025102)</span>
+      </div>
+
+      <div class="member">
+        <strong>Asad Raaifan Afif</strong>
+        <span>(G1C025098)</span>
+      </div>
+
+    </div>
+
+    <button class="start-button" onclick="bukaKalkulator()">
+      ⚓ MULAI PETUALANGAN
+    </button>
+
+    <p class="footer">
+      ⚔ One Piece Matrix Adventure ⚔
+    </p>
+
+  </section>
+
+
+  <!-- ================= KALKULATOR ================= -->
+  <section id="calculator" class="page calculator-page hidden">
+
+    <div class="calculator">
+
+      <button class="back-button" onclick="kembaliHome()">
+        ← Menu Utama
+      </button>
+
+      <h1>🏴‍☠️ KALKULATOR MATRIKS</h1>
+
+      <p class="subtitle">
+        Grand Line Matrix Calculator
+      </p>
+
+      <div class="card">
+
+        <label for="ukuran">
+          Pilih Ukuran Matriks
+        </label>
+
+        <select id="ukuran">
+          <option value="2">2 × 2</option>
+          <option value="3">3 × 3</option>
+        </select>
+
+        <button onclick="buatMatriks()">
+          Buat Matriks
+        </button>
+
+      </div>
+
+
+      <div id="inputMatriks"></div>
+
+
+      <div id="menuOperasi" class="operation-menu hidden">
+
+        <h3>⚔ PILIH OPERASI</h3>
+
+        <button onclick="determinan()">
+          Determinan
+        </button>
+
+        <button onclick="transpose()">
+          Transpose
+        </button>
+
+        <button onclick="invers()">
+          Invers
+        </button>
+
+        <button onclick="gaussJordan()">
+          Gauss-Jordan (RREF)
+        </button>
+
+      </div>
+
+
+      <div id="hasil"></div>
+
+    </div>
+
+  </section>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
